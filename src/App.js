@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { Layout } from "antd";
 import Transactions from "./components/Transactions";
@@ -32,7 +32,7 @@ const siderStyle = {
 };
 
 function App() {
-  const [userName, setUserName] = useState("Mark");
+  const [userName, setUserName] = useState("Siim");
 
   return (
     <Layout>
