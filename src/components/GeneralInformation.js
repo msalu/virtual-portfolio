@@ -9,28 +9,30 @@ function GeneralInformation(props) {
   const [totalValue, setTotalValue] = useState("0");
 
   const fetchBalance = () => {
-    fetch(`/statistics/client/${userName}`)
+    fetch(`/transactions/client/balance/${userName}`)
       .then((res) => res.json())
       .then((data) => {
-        let value = Number(data);
+        console.log(data);
+        let value = Number(data[0].balance);
         setClientBalance(value.toFixed(2));
       });
   };
 
   const fetchTotalProfit = () => {
-    fetch(`/statistics/total-profit/${userName}`)
+    fetch(`/transactions/client/gain_and_loss/${userName}`)
       .then((res) => res.json())
       .then((data) => {
-        let value = Number(data);
+        console.log(data);
+        let value = Number(data[0].total_gain_loss);
         setTotalProfit(value.toFixed(2));
       });
   };
 
   const fetchTotalValue = () => {
-    fetch(`/statistics/total-value/${userName}`)
+    fetch(`/transactions/client/portfolio_value/${userName}`)
       .then((res) => res.json())
       .then((data) => {
-        let value = Number(data);
+        let value = Number(data[0].total_portfolio_value);
         setTotalValue(value.toFixed(2));
       });
   };
@@ -48,20 +50,15 @@ function GeneralInformation(props) {
   return (
     <>
       <Row>
-        <Col>General Information</Col>
+        <Col className="general-info-title">General Information</Col>
       </Row>
-      <Row justify={"space-between"}>
-        {/*<Col>
-          <Statistic
-            title="Current Balance"
-            value={659}
-          />
-        </Col>*/}
+      <Row
+        className="general-info-tabs"
+        justify={"space-between"}>
         <Col>
           <Card
             size="small"
             title="Current Balance"
-            //extra={<a href="#">More</a>}
             style={{
               width: 300,
             }}>
@@ -72,7 +69,6 @@ function GeneralInformation(props) {
           <Card
             size="small"
             title="Total Profit/Loss"
-            //extra={<a href="#">More</a>}
             style={{
               width: 300,
             }}>
@@ -83,7 +79,6 @@ function GeneralInformation(props) {
           <Card
             size="small"
             title="Total Portfolio Value"
-            //extra={<a href="#">More</a>}
             style={{
               width: 300,
             }}>

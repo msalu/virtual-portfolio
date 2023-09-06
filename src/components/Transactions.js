@@ -94,8 +94,8 @@ function Transactions(props) {
   return (
     <>
       <Row justify={"space-between"}>
-        <Col>Transactions</Col>
-        <Col>
+        <Col className="transactions-title">Transactions</Col>
+        <Col className="create-new-purchase-btn">
           <Button
             type="primary"
             onClick={() => setIsModalOpen(true)}>
@@ -109,6 +109,7 @@ function Transactions(props) {
         </Col>
       </Row>
       <Table
+        className="transactions-table-container"
         key={1}
         columns={columns}
         dataSource={transactions}

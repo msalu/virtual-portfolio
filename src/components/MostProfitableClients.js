@@ -40,9 +40,12 @@ function MostProfitableClients(props) {
   return (
     <>
       <Row>
-        <Col>Most Profitable Clients</Col>
+        <Col className="most-profitable-clients-title">
+          Most Profitable Clients
+        </Col>
       </Row>
       <Table
+        className="most-profitable-clients-container"
         key={1}
         columns={columns}
         dataSource={topClients}

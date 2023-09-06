@@ -1,10 +1,6 @@
-.transaction-table {
-  margin-top: 0 auto;
-  padding: 1.5rem;
-}
-
-.transaction-header {
-  margin: 2rem 0 0 1.5rem;
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .recent-stock-row,
@@ -20,4 +16,26 @@
 .ant-table-wrapper .ant-table,
 .ant-table-wrapper .ant-table-tbody > tr > td {
   border-radius: 8px;
+}
+
+.general-info-title,
+.transactions-title,
+.recent-stocks-title,
+.most-profitable-clients-title {
+  padding-left: 1rem;
+}
+
+.general-info-tabs,
+.transactions-table-container,
+.recent-stocks-container,
+.most-profitable-clients-container {
+  padding: 1rem;
+}
+
+.create-new-purchase-btn {
+  padding-right: 1rem;
+}
+
+aside {
+  line-height: none;
 }

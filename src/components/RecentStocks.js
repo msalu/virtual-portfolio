@@ -31,9 +31,10 @@ function RecentStocks(props) {
   return (
     <>
       <Row>
-        <Col>Recent Stocks</Col>
+        <Col className="recent-stocks-title">Recent Stocks</Col>
       </Row>
       <Table
+        className="recent-stocks-container"
         key={1}
         columns={columns}
         dataSource={stocks}

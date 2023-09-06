@@ -95,7 +95,7 @@ def get_client_gain_and_loss(user_name):
         "ON t.stock_id = s.stock_id "
         "INNER JOIN clients AS c "
         "ON t.client_id = c.client_id "
-         "WHERE c.user_name = %s", (user_name,))
+        "WHERE c.user_name = %s", (user_name,))
 
     row_headers = [x[0] for x in cursor.description]
     gain_loss = cursor.fetchall()
@@ -110,7 +110,7 @@ def get_client_gain_and_loss(user_name):
 def get_client_portfolio_value(user_name):
     cursor.execute(
         "SELECT "
-        " c.user_name, SUM(t.volume * s.stock_current_price) AS total_portfolio_value "
+        "c.user_name, SUM(t.volume * s.stock_current_price) AS total_portfolio_value "
         "FROM transactions AS t "
         "INNER JOIN stocks AS s "
         "ON t.stock_id = s.stock_id "
@@ -123,7 +123,40 @@ def get_client_portfolio_value(user_name):
     payload = []
     for result in portfolio_value:
         payload.append(dict(zip(row_headers, result)))
-    return jsonify(payload)      
+    return jsonify(payload)   
+
+
+#GET call for displaying user's current balance
+@app.route('/transactions/client/balance/<user_name>', methods=['GET'])
+def get_client_balance(user_name):
+    cursor.execute(
+        "SELECT "
+        "c.balance "
+        "FROM clients AS c "
+        "WHERE c.user_name = %s", (user_name,))
+
+    row_headers = [x[0] for x in cursor.description]
+    balance = cursor.fetchall()
+    payload = []
+    for result in balance:
+        payload.append(dict(zip(row_headers, result)))
+    return jsonify(payload)  
+
+
+#GET call for displaying all stocks
+@app.route('/transactions/stocks', methods=['GET'])
+def get_stocks():
+    cursor.execute(
+        "SELECT "
+        "s.stock_name "
+        "FROM stocks AS s ")
+
+    row_headers = [x[0] for x in cursor.description]
+    stocks = cursor.fetchall()
+    payload = []
+    for result in stocks:
+        payload.append(dict(zip(row_headers, result)))
+    return jsonify(payload)     
 
 
 if __name__ == '__main__':

@@ -6,7 +6,8 @@ CREATE TABLE clients (
     client_id INT PRIMARY KEY AUTO_INCREMENT,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
-    user_name VARCHAR(100) NOT NULL
+    user_name VARCHAR(100) NOT NULL,
+    balance FLOAT NOT NULL
 );
 
 CREATE TABLE stocks (
@@ -30,15 +31,15 @@ ALTER TABLE transactions ADD CONSTRAINT transactions_client_id_fk FOREIGN KEY (c
 ALTER TABLE transactions ADD CONSTRAINT transactions_stock_id_fk FOREIGN KEY (stock_id) REFERENCES stocks(stock_id);
 
 
-INSERT INTO clients (first_name, last_name, user_name)
+INSERT INTO clients (first_name, last_name, user_name, balance)
 VALUES
-("Siim", "Kuusk", "Siim"),
-("Kaan", "Akbas", "Kaan"),
-("Anthony", "Bernard", "Anthony"),
-("Shota", "Abkhazi", "Shota"),
-("Jan-Hendrik", "Tamm", "Jan-Hendrik"),
-("Mark", "Võru", "Mark"),
-("Martin", "McDoe", "Martin");
+("Siim", "Kuusk", "Siim", "545.50"),
+("Kaan", "Akbas", "Kaan", "921.05"),
+("Anthony", "Bernard", "Anthony", "2545.00"),
+("Shota", "Abkhazi", "Shota", "334.14"),
+("Jan-Hendrik", "Tamm", "Jan-Hendrik", "659.21"),
+("Mark", "Võru", "Mark", "125.30"),
+("Martin", "McDoe", "Martin", "481.46");
 
 INSERT INTO stocks (stock_name, stock_current_price, stock_price_update_time)
 VALUES
@@ -61,5 +62,12 @@ VALUES
 ("6", "6", "50", "40.60", CURRENT_TIMESTAMP()),
 ("7", "7", "30", "5.00", CURRENT_TIMESTAMP());
 
+INSERT INTO transactions (client_id, stock_id, volume, stock_purchase_price, created_at)
+VALUES
+("1", "2","10", "1.00",CURRENT_TIMESTAMP()),
+("1", "3","20", "3.00",CURRENT_TIMESTAMP()),
+("1", "4","70", "21.00",CURRENT_TIMESTAMP()),
+("1", "5","100", "150.00",CURRENT_TIMESTAMP());
 
+DROP DATABASE virtual_portfolio;
 
