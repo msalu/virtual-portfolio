@@ -1,74 +1,68 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# Home Assignment for Adcash Full Stack Developer Position
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Task was to create a simple virutal investment portfolio management for stock market. Because it is a full web development project, then I needed to take care of data handling at database level, creating queries and REST endpoints in backend and fetching them at the frontend - whole life cycle if you will. There were following requirements for the task:
 
-## Available Scripts
+Each client should have some balance in their virtual investment portfolios. Gain
+and loss of clients should be calculated based on the difference between purchase
+and current prices of stocks. Each purchase should be deducted from the client’s
+balance. 
 
-In the project directory, you can run:
+**Domain**:
+- Purchase stock for a client
+- List of transactions done per client
+- List the most profitable clients and view their transactions
+- List recent stocks based on creation time
 
-### `npm start`
+**Technical**:
+- PHP/Python framework for backend
+- Vue/React for frontend
+- Data should be stored in MySQL/PostgreSQL;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Project has only one view with modal for stock purchase, all the data manipulation is taken care at database and backend level, frontend is just for visualization.
 
-### `npm test`
+**_My final goal was also to dockerize the whole project inorder to make the deployment process smoother, but due lack of knowledge I didn't succeed - so this project is not finalized but in-progress._**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Starting database
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    - install MySQL Community Server and Workbench (for convenient db insertion and visualization) into your computer if you haven't yet
+    - create a db called 'virtual-portfolio', PORT:3306
+    - import from folder 'mysql' file 'virtual-portfolio-db'
+    - run the query
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Starting backend
 
-### `npm run eject`
+    $ install Python into your computer if you haven't yet
+    $ git clone https://github.com/msalu/loan-app.git
+    $ cd flask-server
+    $ pip install Flask
+    $ pip install mysql-connector-python
+    $ python server.py
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Starting frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    $ cd virtual-portfolio
+    $ npm i
+    $ npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Start & Watch
+    - MySQL Server has to work
+    - Backend -> $ python server.py
+    - Front -> $ npm start
+    - Viewing backend -> http://localhost:5000 -> corresponding URL endpoints are in the file 'server-py'
+    - Viewing frontend -> http://localhost:3000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Languages & Tools
 
-### Code Splitting
+ - Languages: SQL, Python ,React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# virtual-portfolio
->>>>>>> 95ee8c6b44e38c3b33dedebda7aa42f7c3cee7bf
+ - Database: MySQL
+ - Backend: Python Flask, MySQL Connector
+ - Frontend: ReactJS, Ant Design Framework
