@@ -9,18 +9,19 @@ and current prices of stocks. Each purchase should be deducted from the client�
 balance. 
 
 App should allow users to:
-● Purchase stock for a client
-● List of transactions done per client
-● List the most profitable clients and view their transactions
-● List recent stocks based on creation time
+- Purchase stock for a client
+- List of transactions done per client
+- List the most profitable clients and view their transactions
+- List recent stocks based on creation time
 
 Technical:
-● PHP/Python framework for backend
-● Vue/React for frontend
-● Data should be stored in MySQL/PostgreSQL;
+- PHP/Python framework for backend
+- Vue/React for frontend
+- Data should be stored in MySQL/PostgreSQL;
 
 
 Project has only one view with modal for stock purchase, all the data manipulation is taken care at database and backend level, frontend is just for visualization.
+
 _My final goal was also to dockerize the whole project inorder to make the deployment process smoother, but due lack of knowledge I didn't succeed - so this project is not finalized but in-progress._
 
 ---
