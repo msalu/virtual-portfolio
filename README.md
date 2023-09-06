@@ -2,19 +2,18 @@
 
 Task was to create a simple virutal investment portfolio management for stock market. Because it is a full web development project, then I needed to take care of data handling at database level, creating queries and REST endpoints in backend and fetching them at the frontend - whole life cycle if you will. There were following requirements for the task:
 
-Domain:
 Each client should have some balance in their virtual investment portfolios. Gain
 and loss of clients should be calculated based on the difference between purchase
 and current prices of stocks. Each purchase should be deducted from the client’s
 balance. 
 
-App should allow users to:
+**Domain**:
 - Purchase stock for a client
 - List of transactions done per client
 - List the most profitable clients and view their transactions
 - List recent stocks based on creation time
 
-Technical:
+**Technical**:
 - PHP/Python framework for backend
 - Vue/React for frontend
 - Data should be stored in MySQL/PostgreSQL;
@@ -22,7 +21,7 @@ Technical:
 
 Project has only one view with modal for stock purchase, all the data manipulation is taken care at database and backend level, frontend is just for visualization.
 
-_My final goal was also to dockerize the whole project inorder to make the deployment process smoother, but due lack of knowledge I didn't succeed - so this project is not finalized but in-progress._
+**_My final goal was also to dockerize the whole project inorder to make the deployment process smoother, but due lack of knowledge I didn't succeed - so this project is not finalized but in-progress._**
 
 ---
 
