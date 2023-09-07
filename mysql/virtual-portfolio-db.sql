@@ -7,13 +7,13 @@ CREATE TABLE clients (
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
     user_name VARCHAR(100) NOT NULL,
-    balance FLOAT NOT NULL
+    balance DECIMAL NOT NULL
 );
 
 CREATE TABLE stocks (
     stock_id INT PRIMARY KEY AUTO_INCREMENT,
     stock_name VARCHAR(100) NOT NULL,
-    stock_current_price FLOAT NOT NULL,
+    stock_current_price DECIMAL NOT NULL,
     stock_price_update_time TIMESTAMP NOT NULL
 );
 
@@ -69,5 +69,4 @@ VALUES
 ("1", "4","70", "21.00",CURRENT_TIMESTAMP()),
 ("1", "5","100", "150.00",CURRENT_TIMESTAMP());
 
-DROP DATABASE virtual_portfolio;
 
