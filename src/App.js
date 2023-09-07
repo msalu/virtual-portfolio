@@ -11,24 +11,25 @@ const { Header, Sider, Content } = Layout;
 
 const headerStyle = {
   textAlign: "center",
-  color: "#fff",
-  height: 100,
+  color: "#3b3b3b",
+  height: 64,
   paddingInline: 50,
   lineHeight: "64px",
-  backgroundColor: "#7dbcea",
+  backgroundColor: "#ededed",
 };
 const contentStyle = {
   textAlign: "center",
-  minHeight: 750,
-  lineHeight: "120px",
+  minHeight: 120,
+  lineHeight: "80px",
   color: "#fff",
-  backgroundColor: "#108ee9",
+  backgroundColor: "#fafafa",
 };
 const siderStyle = {
+  borderLeft: "1px solid #ededed",
   textAlign: "center",
-  lineHeight: "120px",
-  color: "#fff",
-  backgroundColor: "#3ba0e9",
+  lineHeight: "80px",
+  color: "#3b3b3b",
+  backgroundColor: "#fafafa",
 };
 
 function App() {

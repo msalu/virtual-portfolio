@@ -6,8 +6,8 @@ function HeaderInfo(props) {
   return (
     <>
       <Row justify={"space-between"}>
-        <Col>Logo</Col>
-        <Col>{userName}</Col>
+        <Col className="header-title">Logo</Col>
+        <Col className="header-title">{userName}</Col>
       </Row>
     </>
   );
