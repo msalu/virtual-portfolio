@@ -63,3 +63,42 @@ body {
   font-weight: bold;
   font-size: x-large;
 }
+
+.ant-layout .ant-layout-sider {
+  background: #fafafa;
+}
+
+.ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(
+    .ant-table-row-expand-icon-cell
+  ):not([colspan])::before {
+  background-color: #c5c2c2;
+  margin-right: 1rem;
+}
+
+.header-style {
+  text-align: center;
+  color: #3b3b3b;
+  height: 64;
+  padding-inline: 50;
+  line-height: 64px;
+  background-color: #ededed;
+}
+
+.content-style {
+  text-align: center;
+  min-height: 120;
+  line-height: 80px;
+  color: #fff;
+  background-color: #fafafa;
+}
+
+.sider-style {
+  border-left: 1px solid #ededed;
+  text-align: center;
+  line-height: 80px;
+  color: #3b3b3b;
+  background-color: #fafafa;
+}

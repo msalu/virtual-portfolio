@@ -9,7 +9,7 @@ import MostProfitableClients from "./components/MostProfitableClients";
 
 const { Header, Sider, Content } = Layout;
 
-const headerStyle = {
+/*const headerStyle = {
   textAlign: "center",
   color: "#3b3b3b",
   height: 64,
@@ -30,22 +30,22 @@ const siderStyle = {
   lineHeight: "80px",
   color: "#3b3b3b",
   backgroundColor: "#fafafa",
-};
+};*/
 
 function App() {
   const [userName, setUserName] = useState("Siim");
 
   return (
     <Layout>
-      <Header style={headerStyle}>
+      <Header className="header-style">
         <HeaderInfo userName={userName} />
       </Header>
       <Layout hasSider>
-        <Content style={contentStyle}>
+        <Content className="content-style">
           <GeneralInformation userName={userName} />
           <Transactions userName={userName} />
         </Content>
-        <Sider style={siderStyle}>
+        <Sider className="sider-style">
           <RecentStocks />
           <MostProfitableClients setUserName={(value) => setUserName(value)} />
         </Sider>
