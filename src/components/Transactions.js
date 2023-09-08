@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
-import { Col, Row, Table, Button, Dropdown, Space } from "antd";
-import { Modal } from "antd";
-import { DownOutlined } from "@ant-design/icons";
+import { Col, Row, Table, Button } from "antd";
 import PurchaseModal from "./PurchaseModal";
 
 const columns = [
@@ -35,44 +33,6 @@ const columns = [
     dataIndex: "created_at",
   },
 ];
-/*const data = [
-  {
-    key: "1",
-    stock: "Adcash OÜ",
-    volume: 10,
-    purchase_price: "€ 1.00",
-    current_price: "€ 5.00",
-    gain_and_loss: "+ € 40.00",
-    purchase_time: "15.08.2023 12:45",
-  },
-  {
-    key: "2",
-    stock: "Adcash OÜ",
-    volume: 70,
-    purchase_price: "€ 3.00",
-    current_price: "€ 5.00",
-    gain_and_loss: "+ € 140.00",
-    purchase_time: "12.08.2023 13:21",
-  },
-  {
-    key: "3",
-    stock: "Google",
-    volume: 100,
-    purchase_price: "€ 1.00",
-    current_price: "€ 0.20",
-    gain_and_loss: "- € 80.00",
-    purchase_time: "02.07.2023 17:14",
-  },
-  {
-    key: "4",
-    stock: "Tesla Inc",
-    volume: 1,
-    purchase_price: "€ 21.00",
-    current_price: "€ 21.00",
-    gain_and_loss: "€ 0.00",
-    purchase_time: "27.06.2023 21:02",
-  },
-];*/
 
 function Transactions(props) {
   const { userName } = props;

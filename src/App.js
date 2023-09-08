@@ -9,29 +9,6 @@ import MostProfitableClients from "./components/MostProfitableClients";
 
 const { Header, Sider, Content } = Layout;
 
-/*const headerStyle = {
-  textAlign: "center",
-  color: "#3b3b3b",
-  height: 64,
-  paddingInline: 50,
-  lineHeight: "64px",
-  backgroundColor: "#ededed",
-};
-const contentStyle = {
-  textAlign: "center",
-  minHeight: 120,
-  lineHeight: "80px",
-  color: "#fff",
-  backgroundColor: "#fafafa",
-};
-const siderStyle = {
-  borderLeft: "1px solid #ededed",
-  textAlign: "center",
-  lineHeight: "80px",
-  color: "#3b3b3b",
-  backgroundColor: "#fafafa",
-};*/
-
 function App() {
   const [userName, setUserName] = useState("Siim");
 

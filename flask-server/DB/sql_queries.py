@@ -91,7 +91,28 @@ def get_most_profitable_clients():
 def get_stocks():
     sql_query = (
         "SELECT "
-        "s.stock_name "
+        "* "
         "FROM stocks AS s ")
     return sql_query
 
+
+def get_client_id(user_name):
+    sql_query = (
+        "SELECT c.client_id "
+        "FROM clients AS c "
+        "WHERE c.user_name = %s"
+    )
+    query_params = (user_name,)
+    return sql_query, query_params
+
+
+def post_transaction():
+    sql_query = (
+        "INSERT INTO transactions (client_id, stock_id, volume, stock_purchase_price, created_at) "
+        "VALUES (%s, %s, %s, %s, %s)"
+    )
+    return sql_query
+
+
+
+   
